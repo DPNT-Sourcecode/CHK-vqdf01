@@ -27,7 +27,11 @@ public class CheckoutSolution {
             if(!unit_price.containsKey(c)){
                 return -1; //not throwing any Exception as it was mentioned to just retun -1
             }
+            counts.put(c,counts.getOrDefault(c,0)+1);
         }
+
+        for(Map.Entry<Character,Integer> entry : counts.entrySet()){}
+
 
 
 
@@ -35,6 +39,7 @@ public class CheckoutSolution {
         throw new SolutionNotImplementedException();
     }
 }
+
 
 
 
