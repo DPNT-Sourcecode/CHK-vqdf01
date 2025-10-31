@@ -6,10 +6,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CheckoutSolution {
-    private static final Map<Character,Integer> CHAR_MAP = new HashMap<Character,Integer>();
     public Integer checkout(String skus) {
+        Map<Character,Integer> UNIT_PRICE = new HashMap<Character,Integer>();
+        Map<Character,Integer> SPECIAL_OFFER = new HashMap<Character,Integer>();
 
 
         throw new SolutionNotImplementedException();
     }
 }
+
