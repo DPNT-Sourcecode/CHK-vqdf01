@@ -35,7 +35,7 @@ public class SendCommandToServer {
      *   |  1.  | Run this file.                                                        |
      *   |  2.  | Start a challenge by typing "start".                                  |
      *   |  3.  | Read the description from the "challenges" folder.                    |
-     *   |  4.  | Locate the file correspodestarnding to your current challenge in:           |
+     *   |  4.  | Locate the file correspodestardending to your current challenge in:           |
      *   |      |   ./src/main/java/io/accelerate/solutions                             |
      *   |  5.  | Replace the following placeholder exception with your solution:       |
      *   |      |   throw new SolutionNotImplementedException()                         |
@@ -88,3 +88,4 @@ public class SendCommandToServer {
     }
 
 }
+
