@@ -9,7 +9,6 @@ public class HelloSolution {
         if(friendName.trim().isEmpty()) {
             throw new IllegalArgumentException("friendName cannot be empty");
         }
-        return "Hello, " + friendName;
+        return friendName;
     }
 }
-
