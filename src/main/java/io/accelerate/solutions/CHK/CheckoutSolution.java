@@ -29,8 +29,21 @@ public class CheckoutSolution {
             }
             counts.put(c,counts.getOrDefault(c,0)+1);
         }
+int total = 0;
+        for(Map.Entry<Character,Integer> entry : counts.entrySet()){
+            char sku = entry.getKey();
+            int quantity_sku  = entry.getValue();
+            int price_sku = unit_price.get(sku);
+            if (quantity.containsKey(sku)){
+                int quan = quantity.get(sku);
+                int price = offer_price.get(sku);
+                int sets_special = quantity_sku / quan;
+                int reamins = quantity_sku % quan;
+                total += sets_special*price+reamins*price_sku;
 
-        for(Map.Entry<Character,Integer> entry : counts.entrySet()){}
+            }
+
+        }
 
 
 
@@ -39,6 +52,7 @@ public class CheckoutSolution {
         throw new SolutionNotImplementedException();
     }
 }
+
 
 
 
