@@ -38,24 +38,24 @@ public class CheckoutSolution {
         unit_price.put('E',40);
         unit_price.put('F',10);
         unit_price.put('G',20);
-        unit_price.put('G',20);
-        unit_price.put('G',20);
-        unit_price.put('G',20);
-        unit_price.put('G',20);
-        unit_price.put('G',20);
-        unit_price.put('G',20);
-        unit_price.put('G',20);
-        unit_price.put('G',20);
-        unit_price.put('G',20);
-        unit_price.put('G',20);
-        unit_price.put('G',20);
-        unit_price.put('G',20);
-        unit_price.put('G',20);
-        unit_price.put('G',20);
-        unit_price.put('G',20);
-        unit_price.put('G',20);
-        unit_price.put('G',20);
-        unit_price.put('y',20);
+        unit_price.put('H',10);
+        unit_price.put('I',35);
+        unit_price.put('J',60);
+        unit_price.put('K',80);
+        unit_price.put('L',90);
+        unit_price.put('M',15);
+        unit_price.put('N',40);
+        unit_price.put('O',10);
+        unit_price.put('P',50);
+        unit_price.put('Q',30);
+        unit_price.put('R',50);
+        unit_price.put('S',30);
+        unit_price.put('T',20);
+        unit_price.put('U',40);
+        unit_price.put('V',50);
+        unit_price.put('W',20);
+        unit_price.put('X',90);
+        unit_price.put('y',10);
         unit_price.put('Z',50);
         //getting the count now
 
@@ -126,6 +126,7 @@ public class CheckoutSolution {
         return total;
     }
 }
+
 
 
 
