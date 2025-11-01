@@ -12,6 +12,7 @@ public class CheckoutSolution {
         unit_price.put('B',30);
         unit_price.put('C',20);
         unit_price.put('D',15);
+        unit_price.put('E',40);
 
         //concludes the special offer table
         Map<Character,Integer> quantity = new HashMap<Character,Integer>();
@@ -49,3 +50,4 @@ int total = 0;
         return total;
     }
 }
+
