@@ -6,6 +6,22 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CheckoutSolution {
+
+    static class offer{
+        int quantity;
+        int price;
+        offer(int quantity, int price) {
+            this.quantity = quantity;
+        }
+    }
+    static class crossOffer{
+        char freeSku;
+        int required;
+        crossOffer(char freeSku, int required) {
+            this.freeSku = freeSku;
+        }
+    }
+
     public Integer checkout(String skus) {
 
         if (skus == null) {
@@ -21,7 +37,29 @@ public class CheckoutSolution {
         unit_price.put('D',15);
         unit_price.put('E',40);
         unit_price.put('F',10);
+        unit_price.put('G',20);
+        unit_price.put('G',20);
+        unit_price.put('G',20);
+        unit_price.put('G',20);
+        unit_price.put('G',20);
+        unit_price.put('G',20);
+        unit_price.put('G',20);
+        unit_price.put('G',20);
+        unit_price.put('G',20);
+        unit_price.put('G',20);
+        unit_price.put('G',20);
+        unit_price.put('G',20);
+        unit_price.put('G',20);
+        unit_price.put('G',20);
+        unit_price.put('G',20);
+        unit_price.put('G',20);
+        unit_price.put('G',20);
+        unit_price.put('G',20);
+        unit_price.put('y',20);
+        unit_price.put('Z',50);
         //getting the count now
+
+        Map<Character, Offer[]> special_offers = new HashMap<>()
         Map<Character, Integer> counts = new HashMap<>();
         for (Character c : skus.toCharArray()) {
             if(!unit_price.containsKey(c)){
@@ -67,6 +105,7 @@ int total = 0;
             }
 
         }
-        return total;
+        return 0;
     }
 }
+
