@@ -33,6 +33,8 @@ public class CheckoutSolution {
         if (counts.containsKey('E')&& counts.containsKey('B')){
             int freeB = counts.get('E')/2;
             int currentB = counts.get('B');
+            int remainingB = Math.max(0, currentB-freeB);
+            counts.put('B',remainingB);
 
         }
 int total = 0;
@@ -55,5 +57,6 @@ int total = 0;
         return total;
     }
 }
+
 
 
