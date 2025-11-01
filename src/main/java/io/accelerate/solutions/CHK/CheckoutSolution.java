@@ -98,16 +98,30 @@ public class CheckoutSolution {
             if(counts.containsKey(sku)){
                 int total = counts.get(sku);
                 int group = entry.getValue();
-                counts.put(sku, total-total/group)
+                counts.put(sku, total-total/group);
             }
 
         }
 
+        int total = 0;
+        for (var entry : counts.entrySet()) {
+            char sku = entry.getKey();
+            int quantity = entry.getValue();
+            int price = unit_price.get(sku);
 
+            if(special_offers.containsKey(sku)){
+                for(Offer offer : special_offers.get(sku)){
 
+                    int group = quantity/offer.quantity;
+                    quantity %= offer.quantity;
+                    total += group* offer.price;
+                }
+            }
+            total += quantity*price;
+        }
 
-
-        return 0;
+        return total;
     }
 }
+
 
