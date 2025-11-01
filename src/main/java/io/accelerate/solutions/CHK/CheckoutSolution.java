@@ -64,9 +64,13 @@ public class CheckoutSolution {
         special_offers.put('B', new Offer[]{new Offer(2,45)});
         special_offers.put('H', new Offer[]{new Offer(10,80),new Offer(5,45)});
         special_offers.put('K', new Offer[]{new Offer(2,150)});
-        special_offers.put('P', new Offer[]{new Offer(5,200),new Offer(3,130)});
-        special_offers.put('Q', new Offer[]{new Offer(5,200),new Offer(3,130)});
-        special_offers.put('V', new Offer[]{new Offer(5,200),new Offer(3,130)});
+        special_offers.put('P', new Offer[]{new Offer(5,200)});
+        special_offers.put('Q', new Offer[]{new Offer(3,80)});
+        special_offers.put('V', new Offer[]{new Offer(3,130),new Offer(2,90)});
+
+        Map<Character, Integer> free_item_offers = Map.of('F',3,
+                'U',4);
+        Map<Character, CrossOffer[]> crossOffers = new HashMap<>();
 
 
 
@@ -118,6 +122,7 @@ int total = 0;
         return 0;
     }
 }
+
 
 
 
