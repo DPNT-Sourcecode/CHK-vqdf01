@@ -7,17 +7,17 @@ import java.util.Map;
 
 public class CheckoutSolution {
 
-    static class offer{
+    static class Offer{
         int quantity;
         int price;
-        offer(int quantity, int price) {
+        Offer(int quantity, int price) {
             this.quantity = quantity;
         }
     }
-    static class crossOffer{
+    static class CrossOffer{
         char freeSku;
         int required;
-        crossOffer(char freeSku, int required) {
+        CrossOffer(char freeSku, int required) {
             this.freeSku = freeSku;
         }
     }
@@ -59,7 +59,17 @@ public class CheckoutSolution {
         unit_price.put('Z',50);
         //getting the count now
 
-        Map<Character, Offer[]> special_offers = new HashMap<>()
+        Map<Character, Offer[]> special_offers = new HashMap<>();
+        special_offers.put('A', new Offer[]{new Offer(5,200),new Offer(3,130)});
+        special_offers.put('B', new Offer[]{new Offer(2,45)});
+        special_offers.put('A', new Offer[]{new Offer(5,200),new Offer(3,130)});
+        special_offers.put('A', new Offer[]{new Offer(5,200),new Offer(3,130)});
+        special_offers.put('A', new Offer[]{new Offer(5,200),new Offer(3,130)});
+        special_offers.put('A', new Offer[]{new Offer(5,200),new Offer(3,130)});
+        special_offers.put('A', new Offer[]{new Offer(5,200),new Offer(3,130)});
+
+
+
         Map<Character, Integer> counts = new HashMap<>();
         for (Character c : skus.toCharArray()) {
             if(!unit_price.containsKey(c)){
@@ -108,4 +118,5 @@ int total = 0;
         return 0;
     }
 }
+
 
