@@ -21,15 +21,6 @@ public class CheckoutSolution {
         unit_price.put('D',15);
         unit_price.put('E',40);
         unit_price.put('F',10);
-
-        //concludes the special offer table
-//        Map<Character,Integer> quantity = new HashMap<Character,Integer>();
-//        Map<Character,Integer> offer_price = new HashMap<Character,Integer>();
-//        quantity.put('A',3);
-//        offer_price.put('A',130);
-//        quantity.put('B',2);
-//        offer_price.put('B',45);
-
         //getting the count now
         Map<Character, Integer> counts = new HashMap<>();
         for (Character c : skus.toCharArray()) {
@@ -47,7 +38,7 @@ public class CheckoutSolution {
         } if (counts.containsKey('F')){
             int countF = counts.get('F');
             int payableF = countF - (countF/3);
-            counts.put('B',payableF);
+            counts.put('F',payableF);
 
         }
 int total = 0;
@@ -79,4 +70,5 @@ int total = 0;
         return total;
     }
 }
+
 
