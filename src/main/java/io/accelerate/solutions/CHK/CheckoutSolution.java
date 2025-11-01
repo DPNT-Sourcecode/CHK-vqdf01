@@ -30,6 +30,7 @@ public class CheckoutSolution {
         if (skus.isEmpty()) {
             return 0;
         }
+        skus = skus.toUpperCase();
         Map<Character,Integer> unit_price = new HashMap<Character,Integer>();
         unit_price.put('A',50);
         unit_price.put('B',30);
@@ -126,6 +127,7 @@ public class CheckoutSolution {
         return total;
     }
 }
+
 
 
 
