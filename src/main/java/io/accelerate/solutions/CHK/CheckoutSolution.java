@@ -93,6 +93,16 @@ public class CheckoutSolution {
             }
         }
 
+        for (var entry : free_item_offers.entrySet()) {
+            char sku = entry.getKey();
+            if(counts.containsKey(sku)){
+                int total = counts.get(sku);
+                int group = entry.getValue();
+                counts.put(sku, total-total/group)
+            }
+
+        }
+
 
 
 
@@ -100,3 +110,4 @@ public class CheckoutSolution {
         return 0;
     }
 }
+
