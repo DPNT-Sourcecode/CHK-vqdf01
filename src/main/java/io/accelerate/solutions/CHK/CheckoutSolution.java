@@ -62,11 +62,11 @@ public class CheckoutSolution {
         Map<Character, Offer[]> special_offers = new HashMap<>();
         special_offers.put('A', new Offer[]{new Offer(5,200),new Offer(3,130)});
         special_offers.put('B', new Offer[]{new Offer(2,45)});
-        special_offers.put('A', new Offer[]{new Offer(5,200),new Offer(3,130)});
-        special_offers.put('A', new Offer[]{new Offer(5,200),new Offer(3,130)});
-        special_offers.put('A', new Offer[]{new Offer(5,200),new Offer(3,130)});
-        special_offers.put('A', new Offer[]{new Offer(5,200),new Offer(3,130)});
-        special_offers.put('A', new Offer[]{new Offer(5,200),new Offer(3,130)});
+        special_offers.put('H', new Offer[]{new Offer(10,80),new Offer(5,45)});
+        special_offers.put('K', new Offer[]{new Offer(2,150)});
+        special_offers.put('P', new Offer[]{new Offer(5,200),new Offer(3,130)});
+        special_offers.put('Q', new Offer[]{new Offer(5,200),new Offer(3,130)});
+        special_offers.put('V', new Offer[]{new Offer(5,200),new Offer(3,130)});
 
 
 
@@ -118,5 +118,6 @@ int total = 0;
         return 0;
     }
 }
+
 
 
