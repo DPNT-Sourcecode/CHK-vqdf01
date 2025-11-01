@@ -40,23 +40,17 @@ public class CheckoutSolution {
 int total = 0;
         for(Map.Entry<Character,Integer> entry : counts.entrySet()){
             char sku = entry.getKey();
-            int quantity_sku  = entry.getValue();
-            int price_sku = unit_price.get(sku);
-            if (quantity.containsKey(sku)){
-                int quan = quantity.get(sku);
-                int price = offer_price.get(sku);
-                int sets_special = quantity_sku / quan;
-                int reamins = quantity_sku % quan;
-                total += sets_special*price+reamins*price_sku;
-
-            }else{
-                total += quantity_sku*price_sku;
+            int quantity  = entry.getValue();
+            switch (sku) {
+                case 'A':
+                    int groupof5= qu
             }
 
         }
         return total;
     }
 }
+
 
 
 
