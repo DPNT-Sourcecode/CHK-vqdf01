@@ -15,12 +15,12 @@ public class CheckoutSolution {
         unit_price.put('E',40);
 
         //concludes the special offer table
-        Map<Character,Integer> quantity = new HashMap<Character,Integer>();
-        Map<Character,Integer> offer_price = new HashMap<Character,Integer>();
-        quantity.put('A',3);
-        offer_price.put('A',130);
-        quantity.put('B',2);
-        offer_price.put('B',45);
+//        Map<Character,Integer> quantity = new HashMap<Character,Integer>();
+//        Map<Character,Integer> offer_price = new HashMap<Character,Integer>();
+//        quantity.put('A',3);
+//        offer_price.put('A',130);
+//        quantity.put('B',2);
+//        offer_price.put('B',45);
 
         //getting the count now
         Map<Character, Integer> counts = new HashMap<>();
@@ -57,6 +57,7 @@ int total = 0;
         return total;
     }
 }
+
 
 
 
