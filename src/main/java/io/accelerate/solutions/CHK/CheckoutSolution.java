@@ -42,14 +42,25 @@ int total = 0;
             char sku = entry.getKey();
             int quantity  = entry.getValue();
             switch (sku) {
-                case 'A':
-                    int groupof5= qu
+                case 'A': {
+                    int groupof5 = quantity / 5;
+                    quantity = quantity % 5;
+                    int groupof3 = quantity / 3;
+                    int reminder = quantity % 3;
+                    total + = groupof5 * 200 + groupof3 * 130 + reminder * 50;
+                }
+                case 'B': {
+                    int groupof2 = quantity / 2;
+                    int reminder = quantity % 2;
+                }
+
             }
 
         }
         return total;
     }
 }
+
 
 
 
