@@ -70,7 +70,7 @@ public class CheckoutSolution {
 
         Map<Character, Integer> free_item_offers = Map.of('F',3,
                 'U',4);
-        Map<Character, CrossOffer[]> crossOffers = Map.of('E',new CrossOffer('B',2),
+        Map<Character, CrossOffer> crossOffers = Map.of('E',new CrossOffer('B',2),
                 'N',new CrossOffer('M',2),
                 'R',new CrossOffer('Q',2));
 
@@ -83,47 +83,15 @@ public class CheckoutSolution {
             }
             counts.put(c,counts.getOrDefault(c,0)+1);
         }
-        if (counts.containsKey('E')&& counts.containsKey('B')){
-            int freeB = counts.get('E')/2;
-            int currentB = counts.get('B');
-            int remainingB = Math.max(0, currentB-freeB);
-            counts.put('B',remainingB);
-
-        } if (counts.containsKey('F')){
-            int countF = counts.get('F');
-            int payableF = countF - (countF/3);
-            counts.put('F',payableF);
-
-        }
-int total = 0;
-        for(Map.Entry<Character,Integer> entry : counts.entrySet()){
-            char sku = entry.getKey();
-            int quantity  = entry.getValue();
-            switch (sku) {
-                case 'A'-> {
-                    int groupof5 = quantity / 5;
-                    quantity = quantity % 5;
-                    int groupof3 = quantity / 3;
-                    int reminder = quantity % 3;
-                    total += groupof5 * 200 + groupof3 * 130 + reminder * 50;
-                }
-                case 'B'-> {
-                    int groupof2 = quantity / 2;
-                    int reminder = quantity % 2;
-                    total += groupof2 * 45 + reminder * 30;
-                }
-                case 'C'-> total += quantity*20;
-                case 'D'-> total += quantity*15;
-                case 'E'-> total += quantity*40;
-                case 'F'-> total += quantity*10;
 
 
-            }
 
-        }
+
+        
         return 0;
     }
 }
+
 
 
 
