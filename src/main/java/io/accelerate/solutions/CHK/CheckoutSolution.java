@@ -70,7 +70,9 @@ public class CheckoutSolution {
 
         Map<Character, Integer> free_item_offers = Map.of('F',3,
                 'U',4);
-        Map<Character, CrossOffer[]> crossOffers = new HashMap<>();
+        Map<Character, CrossOffer[]> crossOffers = Map.of('E',new CrossOffer('B',2),
+                'N',new CrossOffer('M',2),
+                'R',new CrossOffer('Q',2));
 
 
 
@@ -122,6 +124,7 @@ int total = 0;
         return 0;
     }
 }
+
 
 
 
