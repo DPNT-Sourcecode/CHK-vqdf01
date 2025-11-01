@@ -83,17 +83,20 @@ public class CheckoutSolution {
             }
             counts.put(c,counts.getOrDefault(c,0)+1);
         }
+        for (var entry : crossOffers.entrySet()) {
+            char source = entry.getKey();
+            CrossOffer offer = entry.getValue();
+            if(counts.containsKey(source) && counts.containsKey(offer.freeSku)){
+                int free_count = counts.get(source)/offer.required;
+                int target_count = counts.get(offer.freeSku);
+                counts.put(offer.freeSku, Math.max(0,target_count-free_count));
+            }
+        }
 
 
 
 
-        
+
         return 0;
     }
 }
-
-
-
-
-
-
