@@ -8,8 +8,11 @@ import java.util.Map;
 public class CheckoutSolution {
     public Integer checkout(String skus) {
 
-        if (skus.isEmpty() || skus == null) {
+        if (skus == null) {
             return -1;
+        }
+        if (skus.isEmpty()) {
+            return 0;
         }
         Map<Character,Integer> unit_price = new HashMap<Character,Integer>();
         unit_price.put('A',50);
@@ -61,7 +64,7 @@ int total = 0;
                 case 'C'-> total += quantity*20;
                 case 'D'-> total += quantity*15;
                 case 'E'-> total += quantity*40;
-                default-> {return -1;}
+
 
             }
 
@@ -69,5 +72,6 @@ int total = 0;
         return total;
     }
 }
+
 
 
