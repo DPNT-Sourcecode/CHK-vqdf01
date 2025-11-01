@@ -7,6 +7,10 @@ import java.util.Map;
 
 public class CheckoutSolution {
     public Integer checkout(String skus) {
+
+        if (skus.isEmpty()) {
+            return -1;
+        }
         Map<Character,Integer> unit_price = new HashMap<Character,Integer>();
         unit_price.put('A',50);
         unit_price.put('B',30);
@@ -65,11 +69,3 @@ int total = 0;
         return total;
     }
 }
-
-
-
-
-
-
-
-
