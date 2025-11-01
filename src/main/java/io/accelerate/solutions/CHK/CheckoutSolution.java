@@ -52,6 +52,7 @@ int total = 0;
                 case 'B': {
                     int groupof2 = quantity / 2;
                     int reminder = quantity % 2;
+                    total + = groupof2 +45 
                 }
 
             }
@@ -60,6 +61,7 @@ int total = 0;
         return total;
     }
 }
+
 
 
 
