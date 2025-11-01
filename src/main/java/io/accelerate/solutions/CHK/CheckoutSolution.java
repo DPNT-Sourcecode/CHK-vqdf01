@@ -30,6 +30,11 @@ public class CheckoutSolution {
             }
             counts.put(c,counts.getOrDefault(c,0)+1);
         }
+        if (counts.containsKey('E')&& counts.containsKey('B')){
+            int freeB = counts.get('E')/2;
+            int currentB = counts.get('B');
+
+        }
 int total = 0;
         for(Map.Entry<Character,Integer> entry : counts.entrySet()){
             char sku = entry.getKey();
@@ -50,4 +55,5 @@ int total = 0;
         return total;
     }
 }
+
 
