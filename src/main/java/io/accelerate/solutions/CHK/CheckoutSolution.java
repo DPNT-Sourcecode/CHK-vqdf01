@@ -70,5 +70,3 @@ int total = 0;
         return total;
     }
 }
-
-
