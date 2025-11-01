@@ -41,17 +41,15 @@ int total = 0;
                 int reamins = quantity_sku % quan;
                 total += sets_special*price+reamins*price_sku;
 
+            }else{
+                total += quantity_sku*price_sku;
             }
 
         }
-
-
-
-
-
-        throw new SolutionNotImplementedException();
+        return total;
     }
 }
+
 
 
 
