@@ -8,7 +8,7 @@ import java.util.Map;
 public class CheckoutSolution {
     public Integer checkout(String skus) {
 
-        if (skus.isEmpty()) {
+        if (skus.isEmpty() || skus == null) {
             return -1;
         }
         Map<Character,Integer> unit_price = new HashMap<Character,Integer>();
@@ -56,7 +56,7 @@ int total = 0;
                 case 'B'-> {
                     int groupof2 = quantity / 2;
                     int reminder = quantity % 2;
-                    total += groupof2 +45 + reminder * 30;
+                    total += groupof2 * 45 + reminder * 30;
                 }
                 case 'C'-> total += quantity*20;
                 case 'D'-> total += quantity*15;
@@ -69,4 +69,5 @@ int total = 0;
         return total;
     }
 }
+
 
