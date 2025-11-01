@@ -111,8 +111,10 @@ public class CheckoutSolution {
         for (var entry : counts.entrySet()) {
             char sku = entry.getKey();
             int quantity = entry.getValue();
-            int price = unit_price.get(sku);
-
+            Integer price = unit_price.get(sku);
+            if(price==null){
+                return -1;
+            }
             if(special_offers.containsKey(sku)){
                 for(Offer offer : special_offers.get(sku)){
 
@@ -127,6 +129,7 @@ public class CheckoutSolution {
         return total;
     }
 }
+
 
 
 
